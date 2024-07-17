@@ -1,0 +1,22 @@
+{% extends 'layout/base.html'%}
+
+{% block content%}
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <h1>Tareas</h1>
+            <ul class="list-group">
+                {%for tarea in tareas%}
+                <a class="list-group-item" href="{% url 'mostrar_tarea' tarea.id %}">
+                    <strong >{{tarea.titulo}} </strong>
+                    <p>{{tarea.descripcion}}</p>
+                </a>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</main>
+
+
+{% endblock %}

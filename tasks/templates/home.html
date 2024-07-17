@@ -1,0 +1,18 @@
+{% extends 'layout/base.html'%}
+
+{% block content%}
+    <main class="container py-5">
+        <section class="card card_body">
+            <h1 class="display-1 text-center">Home</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ad saepe quos sequi. Amet nulla quis facilis velit nam reiciendis, dolore labore obcaecati temporibus itaque sunt officia libero, impedit commodi, quaerat fugit nihil id inventore esse molestias saepe? Porro eum mollitia repellat ut quam architecto assumenda harum neque necessitatibus, quos nulla dolorum quasi voluptatem, iste amet dicta? Culpa, aliquid aperiam tenetur facilis est consequatur consectetur minus earum cumque quibusdam nobis, aliquam similique, eos dolorem tempore neque deserunt impedit nihil exercitationem odio libero laborum. Aspernatur omnis laboriosam adipisci repellat possimus doloremque numquam, quam deleniti vel, quidem ipsa minima velit. Aut, consequatur.</p>
+
+            {% if user.is_authenticated %}
+            {% else %}
+            <div class="text-center">
+                <a class="btn btn-primary" href="/iniciar_sesion/">Entrar</a>
+                <a class="btn btn-primary" href="/crear_usuario/">Crear</a>
+            </div>
+            {% endif %}
+        </section>
+    </main>
+{% endblock %}
